@@ -1,0 +1,4 @@
+Dist-Zilla-Plugin-ProgCriticTests-*
+.cover
+.perlcritic_history
+.build
