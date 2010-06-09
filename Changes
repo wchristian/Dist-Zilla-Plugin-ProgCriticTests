@@ -2,7 +2,10 @@ Revision history for Perl extension {{$dist->name}}
 
 {{$NEXT}}
 
-1.101600  2010-06-10 00:05:47 Europe/Berlin
+1.101601  2010-06-10 00:08:21 Europe/Berlin
+	- removed some newlines
+	- compiled release with fix for dzil that prevents insertion of newlines in
+	  all files, which should fix tests
 
 1.101583  2010-06-07 18:12:44 Europe/Berlin
     - original version
