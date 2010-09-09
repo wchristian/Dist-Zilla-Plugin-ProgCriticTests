@@ -12,8 +12,8 @@ with 'Dist::Zilla::Role::TextTemplate';
 
 has step_size    => ( is => 'ro', isa => 'Int', default => 0                     );
 has severity     => ( is => 'ro', isa => 'Int', default => 0                     );
-has exclude      => ( is => 'ro', isa => 'Str', default => undef                 );
-has profile      => ( is => 'ro', isa => 'Str', default => undef                 );
+has exclude      => ( is => 'ro', isa => 'Str'                                   );
+has profile      => ( is => 'ro', isa => 'Str'                                   );
 has history_file => ( is => 'ro', isa => 'Str', default => '.perlcritic_history' );
 
 
