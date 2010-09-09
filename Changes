@@ -2,6 +2,9 @@ Revision history for Perl extension {{$dist->name}}
 
 {{$NEXT}}
 
+1.102520  2010-09-10 01:24:03 Europe/Berlin
+    - changed the Moose attribute defaults to more sane things
+
 1.101601  2010-06-10 00:08:21 Europe/Berlin
 	- removed some newlines
 	- compiled release with fix for dzil that prevents insertion of newlines in
