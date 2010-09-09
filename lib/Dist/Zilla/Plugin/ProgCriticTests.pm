@@ -19,7 +19,7 @@ has history_file => ( is => 'ro', isa => 'Str', default => '.perlcritic_history'
 
 around add_file => sub {
     my ($orig, $self, $file) = @_;
-    
+
     my $test_content = $self->fill_in_string(
         $file->content,
         {
@@ -31,12 +31,12 @@ around add_file => sub {
             history_file    => \$self->history_file,
         },
     );
-    
+
     my $mem_file = Dist::Zilla::File::InMemory->new({
         name    => $file->name,
         content => $test_content,
     });
-    
+
     return $self->$orig($mem_file);
 };
 
@@ -121,11 +121,11 @@ use lib 'lib';
 use Test::More;
 use Try::Tiny;
 use Path::Class qw(file);
-    
-try { 
+
+try {
     use Test::Perl::Critic::Progressive qw( :all );
 }
-catch {    
+catch {
     plan skip_all => 'T::P::C::Progressive required for this test' if $@;
 };
 
@@ -133,7 +133,7 @@ my $root_path = q<{{ $root_path }}>;
 my $step_size = {{ $step_size }};
 my $severity = {{ $severity }};
 my $exclude = [qw< {{ $exclude }} >];
-    
+
 my $history_file = q<{{ $history_file }}>;
 $history_file = qq<$root_path/$history_file> if file($history_file)->is_relative;
 
@@ -146,18 +146,18 @@ exit;
 
 sub run_test {
     my ( $history_file, $step_size, $exclude, $severity, $profile ) = @_;
-    
+
     set_history_file( $history_file );
     set_total_step_size( $step_size );
-    
+
     my %args;
     $args{-severity} = $severity if $severity;
     $args{-profile} = $profile if $profile;
     $args{-exclude} = $exclude if $exclude;
-    
+
     set_critic_args( %args ) if keys %args;
-    
+
     progressive_critic_ok();
-    
+
     return;
 }
