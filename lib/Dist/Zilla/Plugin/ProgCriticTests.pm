@@ -119,13 +119,7 @@ use lib '../lib';
 use lib 'lib';
 
 use Path::Class qw(file);
-
-BEGIN {
-  unless ( $ENV{ AUTHOR_TESTING } ) {
-    require Test::More;
-    Test::More::plan( skip_all => 'these tests are for testing by the author' );
-  }
-}
+use Test::More;
 
 eval "use Test::Perl::Critic::Progressive qw( :all )";
 plan skip_all => 'Test::Perl::Critic::Progressive required to criticise code' if $@;
