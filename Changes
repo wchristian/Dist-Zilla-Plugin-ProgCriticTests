@@ -1,6 +1,7 @@
 Revision history for Perl extension {{$dist->name}}
 
 {{$NEXT}}
+	- fixed the check for whether ProgCriticTests is installed
 
 1.102520  2010-09-10 01:24:03 Europe/Berlin
     - changed the Moose attribute defaults to more sane things

@@ -123,7 +123,8 @@ use Try::Tiny;
 use Path::Class qw(file);
 
 try {
-    use Test::Perl::Critic::Progressive qw( :all );
+    require Test::Perl::Critic::Progressive;
+    Test::Perl::Critic::Progressive->import( ':all' );
 }
 catch {
     plan skip_all => 'T::P::C::Progressive required for this test' if $@;
