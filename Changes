@@ -1,6 +1,8 @@
 Revision history for Perl extension {{$dist->name}}
 
 {{$NEXT}}
+
+1.111730  2011-06-22 13:05:55 Europe/Berlin
 	- fixed the check for whether ProgCriticTests is installed
 
 1.102520  2010-09-10 01:24:03 Europe/Berlin
