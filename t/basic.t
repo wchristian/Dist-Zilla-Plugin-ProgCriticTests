@@ -34,12 +34,15 @@ sub check_creation {
 
     is_filelist(
         \@files,
-        [qw(
-            dist.ini perlcritic_history
-            lib/DZT/Sample.pm t/basic.t
-            t/author-critic_progressive.t
-            Makefile.PL
-        )],
+        [
+            qw(
+              basic_profile dist.ini
+              perlcritic_history
+              lib/DZT/Sample.pm t/basic.t
+              t/author-critic_progressive.t
+              Makefile.PL
+              )
+        ],
         "all files present",
     );
     
@@ -138,6 +141,7 @@ sub create_tzil {
     my ( $dist, $prog_params ) = @_;
     
     $prog_params->{history_file} = "perlcritic_history";
+    $prog_params->{profile} ||= "basic_profile";
     my $prog_plugin = [ ProgCriticTests => $prog_params ];
 
     my $ini = simple_ini( 'GatherDir', 'MakeMaker', 'ExtraTests', $prog_plugin );
