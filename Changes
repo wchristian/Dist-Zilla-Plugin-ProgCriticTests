@@ -1,6 +1,8 @@
 Revision history for Perl extension {{$dist->name}}
 
 {{$NEXT}}
+
+1.111750  2011-06-24 12:40:28 Europe/Berlin
     - tests should now pass on systems with a custom global critic rc
 
 1.111730  2011-06-22 13:05:55 Europe/Berlin
