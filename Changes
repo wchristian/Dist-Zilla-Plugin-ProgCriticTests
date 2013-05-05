@@ -2,6 +2,9 @@ Revision history for Perl extension {{$dist->name}}
 
 {{$NEXT}}
 
+1.111760  2012-05-05 22:43:30 Asia/Jerusalem
+    - tests should now pass outside "dzil test".
+
 1.111750  2011-06-24 12:40:28 Europe/Berlin
     - tests should now pass on systems with a custom global critic rc
 
