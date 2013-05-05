@@ -11,6 +11,12 @@ use Test::DZil;
 use Try::Tiny;
 use Capture::Tiny qw/capture tee/;
 
+# This is needed to get the tests pass, because they assume we are running
+# under dzil test and fail otherwise -- Shlomi Fish
+#
+# See: https://metacpan.org/module/Dist::Zilla::App::Command::test
+$ENV{AUTHOR_TESTING} = 1;
+
 check_creation();
 check_pass();
 check_fail();
